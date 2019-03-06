@@ -1,4 +1,6 @@
-class Item << ApplicationRecord
+class Item < ActiveRecord::Base
+  belongs_to :category
+  
   has_attached_file :cover,
     styles: {
       original: "1024x1024>",
