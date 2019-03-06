@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_074543) do
+ActiveRecord::Schema.define(version: 2019_03_06_053226) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_074543) do
     t.string "cover_content_type"
     t.bigint "cover_file_size"
     t.datetime "cover_updated_at"
+    t.integer "category_id", null: false
   end
 
   create_table "managers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
